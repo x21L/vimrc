@@ -33,6 +33,7 @@ NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'lervag/vimtex'
 NeoBundle 'valloric/youcompleteme'
 NeoBundle 'artur-shaik/vim-javacomplete2'
+NeoBundle 'fatih/vim-go'
 
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
