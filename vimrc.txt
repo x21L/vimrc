@@ -21,47 +21,52 @@ au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 let skip_defaults_vim=1
 
-"tab settings
+" tab settings
 set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-"line numbers
-set number
+" turn hybrid line numbers on
+:set number relativenumber
+:set nu rnu
 
-"syntax highlighting
+" syntax highlighting
 syntax on
 
-"font config 
-"currently I am using FireCode
+" font config 
+" currently I am using FiraCode
+" keep in mind this only configures gvim
+" for changing the font in the terminal, 
+" check out the docu of the terminal that you are useing
 set macligatures
-set guifont=Fira\ Code:h12
+set guifont=Fira\ Code:h14
+set linespace=3
 
 
-"Plugins are starting here
+" Plugins are starting here
 
-"Airline
+" Airline
 Plugin 'bling/vim-airline'
 
-"Nerd tree comander
+" Nerd tree comander
 Plugin 'scrooloose/nerdtree'
-"autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 
-"vim-latex
+" vim-latex
 Plugin 'vim-latex/vim-latex'
 
-"supertab
+" supertab
 Plugin 'ervandew/supertab'
 
-"c lang
+" c lang
 Plugin 'c.vim'
 
-"c formatting
-Plugin 'rhysd/vim-clang-format'
+" c formatting
+" Plugin 'rhysd/vim-clang-format'
 
-"autoformatting
+" autoformatting
 Plugin 'Chiel92/vim-autoformat'
 let g:python3_host_prog='/usr/bin/python'
 
-"aformat
+" aformat
 Plugin 'datsuns/astyle.vim'
