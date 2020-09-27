@@ -14,7 +14,7 @@ set modelines=0         " CVE-2007-2438
 set nocompatible        " Use Vim defaults instead of 100% vi compatibility
 set backspace=2         " more powerful backspacing
 
-" Don't write backup file if vim is being called by "crontab -e" 
+" Don't write backup file if vim is being called by "crontab -e"
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
@@ -39,12 +39,15 @@ set splitright
 " syntax highlighting
 syntax on
 
-" font config 
+" colorscheme
+" colorscheme ron
+
+" font config
 " currently I am using FiraCode
 " keep in mind this only configures gvim
-" for changing the font in the terminal, 
+" for changing the font in the terminal,
 " check out the docu of the terminal that you are useing
-set macligatures
+" set macligatures
 set guifont=Fira\ Code:h14
 set linespace=3
 
@@ -61,7 +64,12 @@ Plugin 'scrooloose/nerdtree'
 " vim-latex
 Plugin 'vim-latex/vim-latex'
 
-" supertab
+" for creating a latex file. the plugin does not open when it is plain
+" let g:tex_flavor = "plain"
+" let g:tex_flavor = "context"
+let g:tex_flavor = "latex"
+
+" Supertab
 Plugin 'ervandew/supertab'
 
 " c lang
